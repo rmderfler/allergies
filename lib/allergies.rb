@@ -10,10 +10,14 @@
 #input = gets.chomp
 def allergies (number)
   result = []
-  while number>=128
-    result.push('cats')
-    number=number-128
-
+  while number>0
+    if number>=128
+      result.push('cats')
+      number=number-128
+    elsif number>=64
+      result.push('pollen')
+      number=number-64
+    end
   end
-  result.join(" ")
+  result.join(", ")
 end
